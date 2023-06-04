@@ -1,0 +1,122 @@
+html {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-color);
+    font-weight: 400;
+}
+body {
+    background-color: var(--background-color);
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 25px;
+}
+
+.card{
+    background-color: var(--background-card);
+    max-width: 350px;
+    border-radius: 3%;
+    padding: 25px ;
+}
+.card .img-card {
+    width: 100%;
+    border-radius: 2%;
+}
+.card .img-link{
+    position: relative;
+    display: flex;
+}
+.card .title-link {
+    font-size: 15px;
+    color: white;    
+}
+.card .img-link::before{
+    content: '';
+    background-color: var(--hover-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    border-radius: 2%;
+} 
+.card .img-link::after{    
+    content: '';
+    background: url(../imgs/icon-view.svg) no-repeat center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.card .img-link:hover::before {
+    display: block;
+    opacity: 0.4;
+}
+.card .img-link:hover::after {
+    display: block;
+    opacity: 1.0;
+}
+
+.card .title {
+    margin: 20px 0;
+}
+.card .title:hover {
+    color: var(--hover-color);
+}
+.card .description{
+    color: var(--text-color);
+    font-size: 18px;
+}
+.card .info {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+
+}
+.card .info .value {
+    color: var(--hover-color);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+.card .info .value::before {    
+    display: inline-block; 
+    content: '';
+    background: url(../imgs/icon-ethereum.svg) no-repeat center;
+    width: 15px;
+    height: 20px;
+    margin-right: 3px;     
+}
+.card .info .days-left {
+    display: flex;
+    align-items: center;
+}
+.card .info .days-left::before {
+    display: inline-block;
+    content: '';
+    background: url(../imgs/icon-clock.svg) no-repeat center;
+    width: 20px;
+    height: 15px;
+    margin-right: 5px;
+}
+.card .creator {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--line-color);
+    padding-top: 15px;
+}
+.card .creator .creator-img {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 33px;
+    margin-right: 15px;
+}
+.card .creator .creator-name {
+    color: white;
+}
+.card .creator .creator-name:hover {
+    color: var(--hover-color);
+}
